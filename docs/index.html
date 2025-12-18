@@ -1,1 +1,42 @@
-<!DOCTYPE html><html><body>HeatRisk Demo</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NWS HeatRisk Calendar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>NWS HeatRisk Calendar</h1>
+    <p>Choose State → Station → Year (or Average).</p>
+  </header>
+
+  <main class="main">
+    <section class="controls">
+      <div class="control">
+        <label for="stateSelect">State</label>
+        <select id="stateSelect"></select>
+      </div>
+
+      <div class="control">
+        <label for="stationSelect">Station</label>
+        <select id="stationSelect"></select>
+      </div>
+
+      <div class="control">
+        <label for="yearSelect">Year</label>
+        <select id="yearSelect"></select>
+      </div>
+    </section>
+
+    <section class="viewer">
+      <img id="calendarImg" alt="HeatRisk calendar" />
+      <div id="caption" class="caption"></div>
+    </section>
+  </main>
+
+  <script src="stations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
