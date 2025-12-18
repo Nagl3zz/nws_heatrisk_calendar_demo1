@@ -7,36 +7,63 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
-    <h1>NWS HeatRisk Calendar</h1>
-    <p>Choose State → Station → Year (or Average).</p>
-  </header>
 
-  <main class="main">
-    <section class="controls">
-      <div class="control">
-        <label for="stateSelect">State</label>
-        <select id="stateSelect"></select>
+<header class="header">
+  <h1>NWS HeatRisk Calendar</h1>
+  <p>Explore daily HeatRisk by station and year</p>
+</header>
+
+<main class="main">
+
+  <section class="controls">
+    <div class="control">
+      <label for="stateSelect">State</label>
+      <select id="stateSelect"></select>
+    </div>
+
+    <div class="control">
+      <label for="stationSelect">Station</label>
+      <select id="stationSelect"></select>
+    </div>
+
+    <div class="control">
+      <label for="yearSelect">Year</label>
+      <select id="yearSelect"></select>
+    </div>
+  </section>
+
+  <section class="viewer">
+    <img id="calendarImg" alt="HeatRisk calendar" />
+    <div id="caption" class="caption"></div>
+
+    <!-- LEGEND -->
+    <div class="legend">
+      <div class="legend-title">HeatRisk Levels</div>
+      <div class="legend-items">
+        <div class="legend-item"><span class="swatch swatch-0"></span>0 — Green</div>
+        <div class="legend-item"><span class="swatch swatch-1"></span>1 — Yellow</div>
+        <div class="legend-item"><span class="swatch swatch-2"></span>2 — Orange</div>
+        <div class="legend-item"><span class="swatch swatch-3"></span>3 — Red</div>
+        <div class="legend-item"><span class="swatch swatch-4"></span>4 — Magenta</div>
+        <div class="legend-item"><span class="swatch swatch-missing"></span>Missing data</div>
       </div>
+    </div>
 
-      <div class="control">
-        <label for="stationSelect">Station</label>
-        <select id="stationSelect"></select>
+    <!-- NWS EXPLAINER IMAGE -->
+    <div class="heatrisk-explainer">
+      <img
+        src="img/heatrisk_explainer.jpg"
+        alt="NWS HeatRisk levels and health impacts"
+      />
+      <div class="heatrisk-caption">
+        Source: National Weather Service (weather.gov)
       </div>
+    </div>
 
-      <div class="control">
-        <label for="yearSelect">Year</label>
-        <select id="yearSelect"></select>
-      </div>
-    </section>
+  </section>
+</main>
 
-    <section class="viewer">
-      <img id="calendarImg" alt="HeatRisk calendar" />
-      <div id="caption" class="caption"></div>
-    </section>
-  </main>
-
-  <script src="stations.js"></script>
-  <script src="script.js"></script>
+<script src="stations.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
